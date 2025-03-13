@@ -1,0 +1,57 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 12%;
+  height: 100vh;
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+}
+
+.home-content h1 span {
+  color: #6bff33;
+}
+
+.home-content p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.social-icon a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.social-icon a:hover {
+  color: #6bff33;
+}
+
+.btn-group {
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #6bff33;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4caf50;
+}
+
+.home-img img {
+  max-width: 300px;
+  border-radius: 50%;
+}
