@@ -1,4 +1,8 @@
+import { Canvas } from '@react-three/fiber';
 import './Home.css';
+import { OrbitControls } from '@react-three/drei';
+import { Suspense } from 'react';
+import Model3D from './Model3D';
 
 const Home = () => {
   return (
@@ -19,18 +23,19 @@ const Home = () => {
           <a href="mailto:juanmarucasta@gmail.com"><i className='bx bxl-gmail'></i></a>
           <a href="https://instagram.com"><i className='bx bxl-instagram'></i></a>
         </div>
-
-        <div className="btn-group">
-          <a href="#" className="btn">Hire</a>
-          <a href="#contact" className="btn">Contact</a>
-        </div>
       </div>
 
       <div className="home-img">
-        <img src="/assets/img/pc.png" alt="Juan" />
+        <Canvas>
+          <Suspense fallback={null}>
+            <ambientLight intensity={1} />
+            <OrbitControls />
+            <Model3D />
+          </Suspense>
+        </Canvas>
       </div>
     </section>
   );
-}
+};
 
 export default Home;
