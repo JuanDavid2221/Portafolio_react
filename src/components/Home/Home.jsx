@@ -1,8 +1,9 @@
+import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import './Home.css';
 import { OrbitControls } from '@react-three/drei';
 import { Suspense } from 'react';
 import Model3D from './Model3D';
+import './Home.css';
 
 const Home = () => {
   return (
@@ -30,11 +31,14 @@ const Home = () => {
       </div>
 
       <div className="home-img">
-        <Canvas>
+        <Canvas style={{ background: '#090909', width: '100%', height: '100%' }} camera={{ position: [0, 5, 20], fov: 65 }}>
           <Suspense fallback={null}>
-            <ambientLight intensity={1} />
-            <OrbitControls />
+            <ambientLight intensity={2} />
+            <directionalLight position={[10, 10, 5]} intensity={2} />
+            <directionalLight position={[-10, -10, -5]} intensity={2} />
+            <pointLight position={[0, 10, 0]} intensity={2} />
             <Model3D />
+            <OrbitControls />
           </Suspense>
         </Canvas>
       </div>

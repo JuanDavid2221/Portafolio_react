@@ -31,11 +31,13 @@ html{
     transform: scale(1.1);
 }
 span{
-    color: #6bff33
+    color: #ea1dff
+
 ;
 }
 .logo span{
-    text-shadow: 0 0 25px #6bff33
+    text-shadow: 0 0 25px #ea1dff
+
 ;
 }
 
@@ -75,13 +77,16 @@ span{
 /* Efecto hover y activo */
 .navbar a:hover,
 .navbar a:active {
-    color: #6bff33;
-    border-bottom: 3px solid #6bff33;
+    color: #ea1dff
+;
+    border-bottom: 3px solid #ea1dff
+;
 }
 
 /* Ícono del menú */
 #menu {
     font-size: 3.6rem;
-    color: #6bff33;
+    color: #ea1dff
+;
     display: none;
 }
