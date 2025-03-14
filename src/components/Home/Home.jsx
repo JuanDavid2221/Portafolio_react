@@ -16,12 +16,16 @@ const Home = () => {
           and tackling new challenges.
         </p>
 
-        <div className="social-icon">
+        <div className="social-icons">
           <a href="https://www.linkedin.com"><i className='bx bxl-linkedin-square'></i></a>
           <a href="https://github.com"><i className='bx bxl-github'></i></a>
           <a href="https://wa.me/"><i className='bx bxl-whatsapp'></i></a>
           <a href="mailto:juanmarucasta@gmail.com"><i className='bx bxl-gmail'></i></a>
           <a href="https://instagram.com"><i className='bx bxl-instagram'></i></a>
+        </div>
+        <div className="btn-group">
+          <a href="#" className='btn'>Hire</a>
+          <a href="#contact" className='btn'>Contact</a>
         </div>
       </div>
 

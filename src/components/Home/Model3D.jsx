@@ -7,7 +7,7 @@ const Model3D = () => {
     <primitive 
       object={gltf.scene} 
       scale={5} // Aumenta el tamaño aquí
-      position={[0, -1, 0]} // Mueve el modelo hacia abajo
+      position={[0, 0, 0]} // Mueve el modelo hacia abajo
     />
   );
 };
