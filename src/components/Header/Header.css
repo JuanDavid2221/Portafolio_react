@@ -74,19 +74,53 @@ span{
     border-bottom: 3px solid transparent;
 }
 
-/* Efecto hover y activo */
-.navbar a:hover,
-.navbar a:active {
-    color: #ea1dff
-;
-    border-bottom: 3px solid #ea1dff
-;
+.navbar a.active {
+    color: #ea1dff;
+    border-bottom: 3px solid #ea1dff;
+  }
+  
+  .navbar a:hover,
+  .navbar a:active {
+    color: #ea1dff;
+    border-bottom: 3px solid #ea1dff;
+  }
+  
+  #menu {
+    font-size: 3.6rem;
+    color: #ea1dff;
+    display: none;
+  }
+  /* Estilos para el selector de idioma */
+
+/* Estilos para el selector de idioma */
+.language-select {
+    background-color: #000; /* Fondo negro */
+    color: #ea1dff; /* Color del texto */
+    border: none; /* Sin borde */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: 0.3s ease;
+    position: relative;
+    padding-right: 1.5rem; /* Reducir espacio para acercar el icono */
+    padding: 2px;
 }
 
-/* Ícono del menú */
-#menu {
-    font-size: 3.6rem;
-    color: #ea1dff
-;
-    display: none;
+.language-select option {
+    background-color: #000; /* Fondo negro */
+    color: #ea1dff; /* Color del texto */
+}
+
+/* Ajustar el icono para que esté más pegado a la letra */
+.language-select::after {
+    content: '\25BC'; /* Código Unicode para la flecha hacia abajo */
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    right: 1rem; /* Acercar el icono más a la letra */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #ea1dff; /* Color del icono */
 }

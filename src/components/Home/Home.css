@@ -10,13 +10,12 @@
 }
 section{
   min-height: 100vh;
-  padding: 10rem 10% 10rem;
+  padding: 10rem 10% 0rem;
 }
 
 .home{
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
 }
 .home-content{
@@ -25,7 +24,7 @@ section{
   align-items: baseline;
   text-align:left ;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 8rem;
   color: white;
 }
 
@@ -91,9 +90,7 @@ transition: 0.3s ease-in-out;
  .btn{
   display: inline-block;
   padding: 1rem 2.8rem;
-  background-color: #ea1dff
-
-;
+  background-color: #ea1dff;
   border-radius: 4rem;
   font-size: 1.6rem;
   color: black;
@@ -107,6 +104,7 @@ transition: 0.3s ease-in-out;
   box-shadow: 0 0 50px #ea1dff
 
 ;
+
  }
  .btn-group{
   display: flex;
@@ -133,7 +131,119 @@ background-color: #ea1dff
 color: black;
  }
  canvas{
-  width: 800px;
-  height: 700px;
+  width: 900px;
+  height: 650px;
  }
- 
+ .btn1{
+    background-color: black;
+    color: #ea1dff;
+    border: 2px solid #ea1dff;
+    box-shadow: 0 0 25px transparent;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+.btn1:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #ea1dff;
+  background-color: #ea1dff;
+  color: black;
+
+;
+}
+.btn1-group{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+ }
+
+
+ .btn1-group a:nth-of-type(2):hover{
+box-shadow:  0 0 25px #ea1dff
+
+;
+background-color: #ea1dff
+
+;
+color: black;
+ }
+ .experience-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  margin: 4rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  text-align: left;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+  font-size: 5rem;
+  color: #ea1dff;
+  margin-right: 1rem;
+}
+
+.experience-item p {
+  font-size: 1.5rem;
+  color: white;
+}
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Fondo de la pista de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ea1dff; /* Color de la barra de desplazamiento */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 3px solid #000; /* Borde alrededor de la barra de desplazamiento */
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ea1dff #000;
+}
+
+/* Para Internet Explorer y Edge */
+body {
+  -ms-overflow-style: none; /* Ocultar la barra de desplazamiento predeterminada */
+}
+
+body::-ms-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+body::-ms-scrollbar-track {
+  background: #000; /* Fondo de la pista de la barra de desplazamiento */
+}
+
+body::-ms-scrollbar-thumb {
+  background-color: #ea1dff; /* Color de la barra de desplazamiento */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 3px solid #000; /* Borde alrededor de la barra de desplazamiento */
+}
