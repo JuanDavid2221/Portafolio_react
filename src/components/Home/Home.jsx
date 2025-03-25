@@ -10,49 +10,69 @@ import './Home.css';
 
 
 
-
-
-
 const Home = () => {
   const [commitCount, setCommitCount] = useState(0);
 
   useEffect(() => {
-    const fetchCommitCount = async () => {
+    const fetchContributions = async () => {
       try {
-        const username = 'JuanDavid2221'; // Tu nombre de usuario de GitHub
-        const token = ''; // Tu token de acceso personal de GitHub
-
-        const headers = {
-          Authorization: `token ${token}`,
-        };
-
-        const response = await fetch(`https://api.github.com/users/${username}/repos`, { headers });
-        if (!response.ok) {
-          throw new Error('Error fetching repositories');
+        const token = process.env.REACT_APP_GITHUB_TOKEN;
+        console.log('Token:', token); // Verifica si el token se está cargando correctamente
+    
+        if (!token) {
+          throw new Error('GitHub token is missing. Please check your .env file.');
         }
-        const repos = await response.json();
-
-        let totalCommits = 0;
-
-        for (const repo of repos) {
-          if (repo.size > 0) { // Verificar si el repositorio no está vacío
-            const commitsResponse = await fetch(repo.commits_url.replace('{/sha}', ''), { headers });
-            if (!commitsResponse.ok) {
-              console.error(`Error fetching commits for repo: ${repo.name}`);
-              continue; // Saltar al siguiente repositorio si hay un error
+    
+        // Define los intervalos de fechas (máximo 1 año por intervalo)
+        const dateRanges = [
+          { from: "2023-01-01T00:00:00Z", to: "2023-12-31T23:59:59Z" },
+          { from: "2024-01-01T00:00:00Z", to: "2024-12-31T23:59:59Z" },
+          { from: "2025-01-01T00:00:00Z", to: "2025-12-31T23:59:59Z" },
+        ];
+    
+        let totalContributions = 0;
+    
+        for (const range of dateRanges) {
+          const query = `
+            query {
+              user(login: "JuanDavid2221") {
+                contributionsCollection(from: "${range.from}", to: "${range.to}") {
+                  contributionCalendar {
+                    totalContributions
+                  }
+                }
+              }
             }
-            const commits = await commitsResponse.json();
-            totalCommits += commits.length;
+          `;
+    
+          const response = await fetch('https://api.github.com/graphql', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${token}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query }),
+          });
+    
+          const data = await response.json();
+          console.log('API Response:', data); // Verifica la respuesta completa de la API
+    
+          if (data.errors) {
+            console.error('GraphQL Errors:', data.errors); // Muestra los errores de GraphQL
+            throw new Error(data.errors.map(error => error.message).join(', '));
           }
+    
+          const contributions = data.data.user.contributionsCollection.contributionCalendar.totalContributions;
+          totalContributions += contributions; // Suma las contribuciones de este intervalo
         }
-
-        setCommitCount(totalCommits);
+    
+        setCommitCount(totalContributions); // Actualiza el estado con el total de contribuciones
       } catch (error) {
-        console.error('Error fetching commit count:', error);
+        console.error('Error fetching contributions:', error);
       }
     };
 
-    fetchCommitCount();
+    fetchContributions();
   }, []);
 
   return (
