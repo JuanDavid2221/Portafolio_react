@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
@@ -5,6 +7,11 @@ import { Suspense } from 'react';
 import Model3D from './Model3D';
 import { ReactTyped as Typed } from 'react-typed';
 import './Home.css';
+
+
+
+
+
 
 const Home = () => {
   const [commitCount, setCommitCount] = useState(0);
