@@ -56,7 +56,7 @@ const Header = () => {
       <i className='bx bx-menu' id="menu"></i>
       <nav className="navbar">
         <a href="#home" className="active">Home</a>
-        <a href="#about">Education</a>
+        <a href="#about">Resume</a>
         <a href="#projects">Services</a>
         <a href="#contact">Contact</a>
         <select className="language-select" onChange={handleLanguageChange}>

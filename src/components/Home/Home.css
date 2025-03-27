@@ -12,7 +12,7 @@
 }
 section{
   min-height: 100vh;
-  padding: 10rem 10% 0rem;
+  padding: 14rem 10% 0rem;
 }
 
 .home{
@@ -26,7 +26,7 @@ section{
   align-items: baseline;
   text-align:left ;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
   color: white;
 }
 
@@ -248,4 +248,85 @@ body::-ms-scrollbar-thumb {
   background-color: #ea1dff; /* Color de la barra de desplazamiento */
   border-radius: 10px; /* Bordes redondeados */
   border: 3px solid #000; /* Borde alrededor de la barra de desplazamiento */
+}
+
+/*habilidades y educacion */
+#about {
+
+}
+
+.about-container {
+  display: flex;
+  gap: 15rem;
+}
+
+.about-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-buttons button {
+  padding: 0.8rem 1.5rem; /* Aumenta el tamaño del botón */
+  background-color: black; /* Fondo negro */
+  color: #ea1dff; /* Texto blanco */
+  border: 2px solid #ea1dff; /* Borde con color personalizado */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: 600; /* Negrita para el texto */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+  width: 350px;
+  height: 50px;
+}
+
+.about-buttons button:hover {
+  background-color: #ea1dff; /* Cambia el fondo al pasar el cursor */
+  color: black; /* Cambia el color del texto */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.about-buttons button:focus {
+  outline: none; /* Elimina el borde predeterminado de enfoque */
+  background-color: #ea1dff; /* Fondo al hacer clic */
+  color: black; /* Texto negro */
+}
+.about-content {
+  flex: 1 1;
+    padding: 4rem;
+    background-color: black;
+    border: 1px solid #ea1dff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 650px;
+}
+.about-buttons h1{
+  font-size: 5.5rem;
+  color: #ea1dff;
+}
+
+.about-buttons p{
+  font-size: 1.5rem;
+  width: 360px;
+  text-align: justify;
+}
+.about-content h3 {
+  font-size: 3rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+  color: #ea1dff;
+}
+.about-content p{
+font-size: 1.5rem;
+text-align: justify;
+}
+.about-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-content ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }

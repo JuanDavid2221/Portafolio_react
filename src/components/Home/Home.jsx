@@ -12,6 +12,7 @@ import './Home.css';
 
 const Home = () => {
   const [commitCount, setCommitCount] = useState(0);
+  const [activeTab, setActiveTab] = useState('experience'); // Estado para controlar la pestaña activa
 
   useEffect(() => {
     const fetchContributions = async () => {
@@ -139,7 +140,7 @@ const Home = () => {
             <p>Projects Completed</p>
           </div>
           <div className="experience-item">
-            <h3>5</h3>
+            <h3>8</h3>
             <p>Technologies Mastered</p>
           </div>
           <div className="experience-item">
@@ -150,9 +151,64 @@ const Home = () => {
       </section>
      
       <section id="about">
-        <h2>About</h2>
-        <p>About content...</p>
-      </section>
+  <div className="about-container">
+    
+    {/* Botones en columna */}
+    <div className="about-buttons">
+      <h1> Why hire me ?</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quam facilis nesciunt. Amet ducimus veniam voluptatem accusantium placeat maiores beatae obcaecati quidem. Facere voluptatibus voluptas enim natus dolores inventore cupiditate!</p>
+      <button onClick={() => setActiveTab('experience')}>Experience</button>
+      <button onClick={() => setActiveTab('education')}>Education</button>
+      <button onClick={() => setActiveTab('tools')}>Tools</button>
+      <button onClick={() => setActiveTab('about')}>About</button>
+    </div>
+
+    {/* Contenido dinámico */}
+    <div className="about-content">
+      {activeTab === 'experience' && (
+        <div>
+          <h3> My experience</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque reprehenderit ea eos recusandae 
+            pariatur blanditiis, porro eius corporis atque quibusdam numquam molestiae, nam autem necessitatibus.
+             Quam, quis! Fugiat, quaerat explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique exercitationem animi quod totam esse fuga minus accusantium, iure natus, earum ducimus tenetur, blanditiis quibusdam provident possimus. Perspiciatis nisi sequi similique.</p>
+        </div>
+      )}
+      {activeTab === 'education' && (
+        <div>
+          <h3>My education</h3>
+          <ul>
+            <li>
+              <strong>SENA</strong> - Software Analysis and Development Apprentice (2022 - Present)
+            </li>
+            <li>
+              <strong>High School</strong> - Technical Degree in Systems (2018 - 2021)
+            </li>
+          </ul>
+        </div>
+      )}
+      {activeTab === 'tools' && (
+        <div>
+          <h3>My tools</h3>
+          <ul>
+            <li>React, Angular</li>
+            <li>Node.js, Express</li>
+            <li>MongoDB, MySQL</li>
+            <li>Git, GitHub</li>
+          </ul>
+        </div>
+      )}
+      {activeTab === 'about' && (
+        <div>
+          <h3>My about</h3>
+          <p>
+            Passionate about creating innovative and useful technology solutions. I specialize in frontend development
+            and enjoy continuous learning and tackling new challenges.
+          </p>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
       <section id="projects">
         <h2>Projects</h2>
         <p>Projects content...</p>
