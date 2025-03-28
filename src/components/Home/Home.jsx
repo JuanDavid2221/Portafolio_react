@@ -165,17 +165,58 @@ const Home = () => {
 
     {/* Contenido dinámico */}
     <div className="about-content">
-      {activeTab === 'experience' && (
-        <div>
-          <h3> My experience</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque reprehenderit ea eos recusandae 
-            pariatur blanditiis, porro eius corporis atque quibusdam numquam molestiae, nam autem necessitatibus.
-             Quam, quis! Fugiat, quaerat explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique exercitationem animi quod totam esse fuga minus accusantium, iure natus, earum ducimus tenetur, blanditiis quibusdam provident possimus. Perspiciatis nisi sequi similique.</p>
-        </div>
-      )}
+    {activeTab === 'experience' && (
+  <div>
+    <h3>My Experience</h3>
+    <p>
+      Durante mi tiempo en Red de Servicios del Quindío, trabajé en diversas áreas del desarrollo de software, 
+      enfocándome en frontend y optimización de código.
+    </p>
+
+    {/* Contenedor de las tarjetas */}
+    <div className="cards-container">
+      <div className="card">
+        <h4>Desarrollo Frontend</h4>
+        <p><strong>Fecha: Enero 2023 - Marzo 2023</strong></p>
+        <p>Implementé interfaces interactivas utilizando Angular, mejorando la experiencia de usuario.</p>
+      </div>
+      <div className="card">
+        <h4>Optimización de Código</h4>
+        <p><strong>Fecha: Abril 2023 - Junio 2023</strong></p>
+        <p>Refactoricé código en TypeScript y CSS para mejorar el rendimiento y la mantenibilidad.</p>
+      </div>
+      <div className="card">
+        <h4>Trabajo en Equipo</h4>
+        <p><strong>Fecha: Julio 2023 - Septiembre 2023</strong></p>
+        <p>Colaboré con desarrolladores y diseñadores para garantizar coherencia en el producto final.</p>
+      </div>
+      <div className="card">
+        <h4>Gestión de Versiones</h4>
+        <p><strong>Fecha: Octubre 2023 - Diciembre 2023</strong></p>
+        <p>Utilicé Git y GitHub para el control de versiones y trabajo en equipo eficiente.</p>
+      </div>
+      <div className="card">
+        <h4>Pruebas y Depuración</h4>
+        <p><strong>Fecha: Enero 2024 - Marzo 2024</strong></p>
+        <p>Realicé pruebas en la aplicación para detectar y corregir errores antes de la implementación.</p>
+      </div>
+      <div className="card">
+        <h4>Aprendizaje Continuo</h4>
+        <p><strong>Fecha: Abril 2024 - Presente</strong></p>
+        <p>Me mantuve en constante aprendizaje para aplicar buenas prácticas en el desarrollo de software.</p>
+      </div>
+    </div>
+  </div>
+)}
+
       {activeTab === 'education' && (
         <div>
           <h3>My education</h3>
+          <p>
+      Durante mi tiempo en Red de Servicios del Quindío, trabajé en diversas áreas del desarrollo de software, 
+      enfocándome en frontend y optimización de código.
+         </p>
+
           <ul>
             <li>
               <strong>SENA</strong> - Software Analysis and Development Apprentice (2022 - Present)
@@ -187,16 +228,110 @@ const Home = () => {
         </div>
       )}
       {activeTab === 'tools' && (
-        <div>
-          <h3>My tools</h3>
-          <ul>
-            <li>React, Angular</li>
-            <li>Node.js, Express</li>
-            <li>MongoDB, MySQL</li>
-            <li>Git, GitHub</li>
-          </ul>
-        </div>
-      )}
+  <div>
+    <h3>My Tools</h3>
+    <p>
+      Durante mi tiempo en Red de Servicios del Quindío, trabajé en diversas áreas del desarrollo de software, 
+      enfocándome en frontend y optimización de código.
+    </p>
+
+    {/* Contenedor de las tarjetas de herramientas */}
+    <div className="tools-container">
+  <div className="tool-card">
+    <i className="fab fa-react tool-icon tool-react"></i>
+    <h4>React</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-angular tool-icon tool-angular"></i>
+    <h4>Angular</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-node-js tool-icon tool-node"></i>
+    <h4>Node.js</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fas fa-database tool-icon tool-mongodb"></i>
+    <h4>MongoDB</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-git-alt tool-icon tool-git"></i>
+    <h4>Git</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-github tool-icon tool-github"></i>
+    <h4>GitHub</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-python tool-icon tool-python"></i>
+    <h4>Python</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-docker tool-icon tool-docker"></i>
+    <h4>Docker</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-aws tool-icon tool-aws"></i>
+    <h4>AWS</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-html5 tool-icon tool-html"></i>
+    <h4>HTML5</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-css3-alt tool-icon tool-css"></i>
+    <h4>CSS3</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-js-square tool-icon tool-javascript"></i>
+    <h4>JavaScript</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-bootstrap tool-icon tool-bootstrap"></i>
+    <h4>Bootstrap</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-java tool-icon tool-java"></i>
+    <h4>Java</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-vuejs tool-icon tool-vue"></i>
+    <h4>Vue.js</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-php tool-icon tool-php"></i>
+    <h4>PHP</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fas fa-server tool-icon tool-express"></i>
+    <h4>Express</h4>
+  </div>
+  <div className="tool-card">
+    <img src="assets/img/figma.png" alt="Figma" className="tool-icon tool-figma" />
+    <h4>Figma</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-laravel tool-icon tool-laravel"></i>
+    <h4>Laravel</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fas fa-database tool-icon tool-dbeaver"></i>
+    <h4>DBeaver</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fas fa-envelope tool-icon tool-postman"></i>
+    <h4>Postman</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fab fa-microsoft tool-icon tool-azure"></i>
+    <h4>Azure</h4>
+  </div>
+  <div className="tool-card">
+    <i className="fas fa-database tool-icon tool-mysqlworkbench"></i>
+    <h4>MySQL Workbench</h4>
+  </div>
+</div>
+  </div>
+)}
       {activeTab === 'about' && (
         <div>
           <h3>My about</h3>
