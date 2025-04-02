@@ -12,7 +12,7 @@
 }
 section{
   min-height: 100vh;
-  padding: 14rem 10% 0rem;
+  padding: 5rem 10% 0rem;
 }
 
 .home{
@@ -52,6 +52,7 @@ span{
   font-weight: 700;
   margin-top: 1.5rem;
   line-height: 1;
+  width: 500px;
 }
  .home-content p{
   font-size: 1.5rem;
@@ -177,8 +178,7 @@ color: black;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 0;
-  margin: 4rem 0;
+ 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -189,7 +189,7 @@ color: black;
   justify-content: center;
   min-width: 200px;
   text-align: left;
-  background-color: black;
+  background-color: #090909;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -251,13 +251,12 @@ body::-ms-scrollbar-thumb {
 }
 
 /*habilidades y educacion */
-#about {
 
-}
 
 .about-container {
   display: flex;
-  gap: 15rem;
+  gap: 5rem;
+  margin-top: 100px;
 }
 
 .about-buttons {
@@ -268,7 +267,7 @@ body::-ms-scrollbar-thumb {
 
 .about-buttons button {
   padding: 0.8rem 1.5rem; /* Aumenta el tamaño del botón */
-  background-color: black; /* Fondo negro */
+  background-color: #090909; /* Fondo negro */
   color: #ea1dff; /* Texto blanco */
   border: 2px solid #ea1dff; /* Borde con color personalizado */
   border-radius: 8px; /* Bordes redondeados */
@@ -294,11 +293,11 @@ body::-ms-scrollbar-thumb {
 .about-content {
   flex: 1 1;
   padding: 4rem;
-  background-color: black;
+  background-color: #090909;
   border: 1px solid #ea1dff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 650px;
+  height: 600px;
   overflow: hidden; /* Oculta el contenido que se salga del contenedor */
 }
 .about-buttons h1{
@@ -331,18 +330,19 @@ text-align: justify;
   font-size: 1rem;
   line-height: 1.5;
 }
+/* Ajustes para el contenedor de las tarjetas */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-  gap: 3rem 1rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño responsivo */
+  gap: 2rem; /* Espaciado entre las tarjetas */
+  padding: 2rem;
   border-radius: 8px;
-  background-color: black;
-  height: 450px; /* Altura suficiente para mostrar 4 tarjetas */
-  margin-top: 30px;
-  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
-  scrollbar-width: thin; /* Para navegadores compatibles, hace la barra más delgada */
-  scrollbar-color: #ea1dff black; /* Personaliza los colores de la barra */
+  background-color: #090909;
+  max-height: 450px; /* Altura máxima del contenedor */
+  margin-top: 10px;
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  scrollbar-width: thin; /* Barra de desplazamiento más delgada */
+  scrollbar-color: #ea1dff black; /* Colores de la barra de desplazamiento */
 }
 
 /* Personalización de la barra de desplazamiento para navegadores basados en WebKit */
@@ -360,23 +360,30 @@ text-align: justify;
   border: 2px solid black; /* Borde alrededor de la barra */
 }
 
+/* Ajustes para las tarjetas individuales */
 .card {
-  background-color: #090909;
-  border: 1px solid ;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: 1px solid #333;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 400px;
-  height: 200px;
+  width: 100%; /* Asegura que las tarjetas ocupen el ancho disponible */
+  height: 200PX; /* Permite que la altura se ajuste automáticamente */
+  min-height: 150px; /* Altura mínima para las tarjetas */
 }
 
+/* Ajustes para el texto dentro de las tarjetas */
 .card h4 {
   margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #ea1dff;
 }
 
 .card p {
   margin: 0;
+  font-size: 1rem;
+  color: white;
 }
 /* Contenedor de las tarjetas de herramientas */
 /* Contenedor de las tarjetas de herramientas */
@@ -387,7 +394,7 @@ text-align: justify;
   gap: 1.5rem;
   padding: 1rem;
   border-radius: 8px;
-  margin-top: 30px;
+  margin-top: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el contenedor */
   max-height: 450px; /* Altura máxima para habilitar el scroll */
   overflow-y: auto; /* Habilita el desplazamiento vertical */

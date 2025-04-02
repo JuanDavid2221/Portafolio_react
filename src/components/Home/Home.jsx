@@ -98,9 +98,7 @@ const Home = () => {
               and tackling new challenges.
 
               I am highly motivated by the ever-evolving nature of technology and strive to stay updated with the latest
-              trends and best practices in web development. My goal is to design and develop seamless, efficient, and
-              visually appealing user interfaces that enhance user experience. I thrive in dynamic environments where
-              I can apply my creativity and problem-solving skills to build impactful digital solutions.
+              trends and best practices in web development.
             </p>
 
             <div className="social-icons">
